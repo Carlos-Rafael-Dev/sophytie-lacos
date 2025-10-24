@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Nota Fiscal - Sophytie</title>
+  <style>
+    .recibo {
+      border: 2px dashed #333;
+      padding: 20px;
+      width: 350px;
+      font-family: monospace;
+      white-space: pre;
+    }
+    button {
+      margin: 10px 0;
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Nota Fiscal - Sophytie</h1>
+  
+  <button id="gerar-recibo">Gerar Nota Fiscal</button>
+  <button onclick="window.print()">Imprimir</button>
+
+  <div id="area-recibo" class="recibo">
+    <p>Clique no botão para gerar a nota fiscal.</p>
+  </div>
+
+  <script>
+    const botaoGerar = document.getElementById("gerar-recibo");
+    const areaRecibo = document.getElementById("area-recibo");
+
+    // Exemplo de carrinho vindo do PetShop (depois pode ser substituído pelo real)
+    const carrinho = [
+      { produto: "Laço Giulia luxo", preco: 24.90, quantidade: 2 },
+      { produto: "Laço Lorena", preco: 17.90, quantidade: 1 },
+      { produto: "Laço Brenda", preco: 19.90, quantidade: 1 }
+    ];
+
+    botaoGerar.addEventListener("click", () => {
+      let recibo = "--- Nota Fiscal ---\n";
+      let totalGeral = 0;
+
+      carrinho.forEach(item => {
+        const subtotal = item.preco * item.quantidade;
+        totalGeral += subtotal;
+        recibo += `Produto: ${item.produto}\n`;
+        recibo += `Qtd: ${item.quantidade} x R$ ${item.preco.toFixed(2)}\n`;
+        recibo += `Subtotal: R$ ${subtotal.toFixed(2)}\n`;
+        recibo += "-------------------------\n";
+      });
+
+      recibo += `TOTAL GERAL: R$ ${totalGeral.toFixed(2)}\n`;
+      recibo += "-------------------------\n";
+      recibo += "Obrigado pela preferência!\n";
+
+      areaRecibo.textContent = recibo;
+    });
+  </script>
+
+</body>

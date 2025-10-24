@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro | Sophytie Laços</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ====== NAVBAR ====== -->
+    <header class="navbar">
+      <div class="container">
+        <nav>
+          <a href="catalogo.html" class="logo">
+            <img src="./imagens/logo.png" alt="Logo Sophytie Laços" />
+          </a>
+          <ul class="nav-links">
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="sobre.html">Sobre a Loja</a></li>
+            <li> <a href="formulario.html" class="ativo"style="color: #e8aebc;">Login/Cadastro</a></li></style>
+            <li><a href="#">Contato</a></li>
+          </ul>
+          <div class="nav-icons">
+            <button class="icon-btn" aria-label="Buscar">
+              <img src="/src/assets/icons/procurar.png">
+              </svg>
+            </button>
+
+            <button class="icon-btn" aria-label="Carrinho">
+              <img src="/src/assets/icons/carrinho.png">
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ====== CONTEÚDO PRINCIPAL ====== -->
+    <main class="cadastro container">
+      <div class="cadastro-grid">
+        <!-- LADO ESQUERDO: IMAGEM + TEXTO -->
+        <div class="cadastro-info">
+          <img
+            src="/src/assets/images/cadastro-banner.jpg"
+            alt="Imagem de laços femininos"
+          />
+          <div class="texto">
+            <h1>Cadastre-se</h1>
+            <p>
+              Faça parte da nossa comunidade de clientes encantadas com a
+              delicadeza e o cuidado da Sophytie Laços. <br /><br />
+              Após o cadastro, você poderá acompanhar pedidos, novidades e
+              promoções exclusivas.
+            </p>
+          </div>
+        </div>
+
+        <!-- LADO DIREITO: FORMULÁRIO -->
+        <div class="cadastro-form">
+          <h2>Formulário de Cadastro</h2>
+          <form action="/processar-formulario" method="post">
+            <label for="nome">Nome Completo</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite seu nome completo"
+              required
+            />
+
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Digite seu e-mail"
+              required
+            />
+
+            <label for="senha">Senha</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="Crie uma senha"
+              required
+            />
+
+            <label for="confirmar-senha">Confirmar Senha</label>
+            <input
+              type="password"
+              id="confirmar-senha"
+              name="confirmar-senha"
+              placeholder="Repita sua senha"
+              required
+            />
+
+            <button type="submit" class="botao">Finalizar Cadastro</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer>
+      <p>© 2025 Sophytie. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
