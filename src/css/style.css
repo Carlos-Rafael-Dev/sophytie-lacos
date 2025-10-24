@@ -97,7 +97,7 @@ img {
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url('/src/assets/images/ft.webp') center/cover no-repeat;
+    url('../assets/images/ft.webp') center/cover no-repeat;
 }
 
 .hero h1 {
@@ -236,7 +236,7 @@ footer {
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url('/src/assets/images/banner-catalogo.jpg') center/cover no-repeat;
+    url('../assets/images/banner-catalogo.jpg') center/cover no-repeat;
   color: #fff;
   padding: 6rem 1rem;
   text-align: center;
