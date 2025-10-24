@@ -1,11 +1,11 @@
 // lista de produtos (6 itens)
 const produtos = [
-  { nome: "Laço Giulia luxo", preco: 24.90, imagem: "/src/assets/Catalogo/1.png" },
-  { nome: "Laço Lorena", preco: 17.90, imagem: "/src/assets/Catalogo/2.png" },
-  { nome: "Laço Brenda", preco: 19.90, imagem: "/src/assets/Catalogo/3.png" },
-  { nome: "Laço Duda", preco: 19.90, imagem: "/src/assets/Catalogo/4.png" },
-  { nome: "Laço Floral Luxo", preco: 24.90, imagem: "/src/assets/Catalogo/5.png" },
-  { nome: "Laço Sofia", preco: 22.00, imagem: "/src/assets/Catalogo/6.png" }
+  { nome: "Laço Giulia luxo", preco: 24.90, imagem: "../assets/Catalogo/1.png" },
+  { nome: "Laço Lorena", preco: 17.90, imagem: "../assets/Catalogo/2.png" },
+  { nome: "Laço Brenda", preco: 19.90, imagem: "../assets/Catalogo/3.png" },
+  { nome: "Laço Duda", preco: 19.90, imagem: "../assets/Catalogo/4.png" },
+  { nome: "Laço Floral Luxo", preco: 24.90, imagem: "../assets/Catalogo/5.png" },
+  { nome: "Laço Sofia", preco: 22.00, imagem: "../assets/Catalogo/6.png" }
 ];
 
 // pegar os elementos do DOM que vamos usar
