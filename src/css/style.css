@@ -312,6 +312,17 @@ footer {
   background-color: #c57a87;
 }
 
+.botoesComprar {
+  display: flex;
+  gap: 10px;
+}
+
+#btnAddCart {
+  background-color: white;
+  color: #e8aebc;
+  border: 2px solid #e8aebc;
+}
+
 /* ====== BOTÕES DE AÇÃO ====== */
 .acoes {
   display: flex;
