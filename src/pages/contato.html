@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contato</title>
+
+    <!-- Fontes: Playfair Display (títulos) e Poppins (corpo) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --cor-principal: #e8aebc;
+        --fundo: #f7f7fb;
+        --texto: #1f1f1f;
+        --texto-secundario: #555;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        color: var(--texto);
+        background: var(--fundo);
+      }
+      
+      main,
+      footer {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+
+/* ====== NAVBAR ====== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #5f4c49;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #e8aebc;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-icons img {
+  height: 20px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  fill: #5f4c49;
+  transition: transform 0.2s ease;
+}
+
+.icon-btn:hover {
+  transform: scale(1.1);
+  fill: #e8aebc;
+}
+
+.fakeheader {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        padding: 12px;
+}
+      
+      /* Título usa a segunda fonte */
+      h1 {
+        color:#e8aebc; 
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      form {
+        background: #f8d6de;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .campo {
+        margin-bottom: 12px;
+      }
+      label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 1rem;
+      }
+      textarea {
+        resize: vertical;
+      }
+
+      button {
+        padding: 12px 20px;
+        background: var(--cor-principal);
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s ease;
+      }
+
+      button:hover {
+        background-color: #c57a87;
+      }
+
+      .status {
+        margin-top: 10px;
+        min-height: 1.2em;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+        
+        main,
+        footer {
+          padding: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <nav>
+          <a href="catalogo.html" class="logo">
+            <img src="../assets/images/logo.svg" alt="Logo Sophytie Laços" />
+          </a>
+          <ul class="nav-links">
+            <li><a href="catalogo.html" >Catálogo</a></li>
+            <li><a href="sobre.html">Sobre a Loja</a></li>
+            <li><a href="formulario.html">Cadastro</a></li>
+            <li><a href="contato.html" class="ativo" style="color: #e8aebc;">Contato</a></li></style>
+          </ul>
+          <div class="nav-icons">
+            <button class="icon-btn" aria-label="Buscar">
+              <img src="../assets/icons/procurar.png">
+              </svg>
+            </button>
+
+            <button class="icon-btn" aria-label="Carrinho">
+              <img src="../assets/icons/carrinho.png">
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <div class="fakeheader">
+      <h1>Contato</h1>
+      <p>Nos envie uma mensagem:</p>
+    </div>
+
+      <form id="formContato" autocomplete="off" novalidate>
+        <div class="campo">
+          <label for="nome">Nome</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Seu nome"
+            required
+          />
+        </div>
+
+        <div class="campo">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="seu@email.com"
+            required
+          />
+        </div>
+
+        <div class="campo">
+          <label for="mensagem">Mensagem</label>
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="5"
+            placeholder="Escreva sua mensagem"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
+
+        <p id="status" class="status" aria-live="polite"></p>
+      </form>
+    </main>
+
+    <footer>
+      <p>Ou contate nossas redes:</p>
+      <div>
+        <a href="https://www.instagram.com/lacos_sophy/" target="_blank">
+          <img
+            src="../assets/icons/instagram.png"
+            alt="Instagram"
+            style="width: 70px; height: 70px"
+          />
+        </a>
+
+        <a
+          href="https://api.whatsapp.com/message/5L4LFTKOVPDJP1?autoload=1&app_absent=0"
+          target="_blank"
+        >
+          <img
+            src="../assets/icons/whatsapp.png"
+            alt="whatsapp"
+            style="width: 70px; height: 70px"
+          />
+        </a>
+      </div>
+      <p>© 2025 Sophytie. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+      // Validação simples e "envio" local
+      const form = document.getElementById("formContato");
+      const status = document.getElementById("status");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // evita subir o formulário para um servidor (apenas para exemplo)
+
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const mensagem = document.getElementById("mensagem").value.trim();
+
+        // Validação básica: todos os campos preenchidos e email com "@"
+        if (nome && email.includes("@") && mensagem) {
+          status.textContent = "Mensagem enviada com sucesso! (demonstração)";
+          status.style.color = "green";
+          form.reset();
+        } else {
+          status.textContent =
+            "Por favor, preencha corretamente todos os campos.";
+          status.style.color = "red";
+        }
+      });
+    </script>
+  </body>
+</html>
