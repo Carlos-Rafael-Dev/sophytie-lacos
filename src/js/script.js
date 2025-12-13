@@ -21,7 +21,10 @@ produtos.forEach((produto) => {
     <img src="${produto.imagem}" alt="${produto.nome}">
     <h2>${produto.nome}</h2>
     <p>R$ ${produto.preco.toFixed(2)}</p>
-    <button>Comprar</button>
+    <div class="botoesComprar">
+      <button>Comprar agora</button>
+      <button id="btnAddCart">Adicionar ao carrinho</button>
+    </div>
   `;
 
   // adicionar evento de clique ao botão
